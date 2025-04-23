@@ -10,7 +10,21 @@ export default function Header() {
         <a href="/sobre" style={{ color: '#fff', textDecoration: 'none' }}>Sobre nosotros</a>
         <a href="/contacto" style={{ color: '#fff', textDecoration: 'none' }}>Contacto</a>
         <a href="/legal" style={{ color: '#fff', textDecoration: 'none' }}>Aviso legal</a>
-        <a href="/login" style={{ color: '#90ee90', textDecoration: 'none', marginLeft: '1rem' }}>Iniciar sesión</a>
+        <button
+			onClick={onLoginClick}
+			style={{
+				background: 'none',
+				border: 'none',
+				color: '#90ee90',
+				textDecoration: 'none',
+				marginLeft: '1rem',
+				cursor: 'pointer',
+				fontSize: '1rem'
+			}}
+		>
+			Iniciar sesión
+		</button>
+
       </nav>
     </header>
   );
