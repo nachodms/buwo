@@ -1,4 +1,4 @@
-export default function Header() {
+export default function Header({ onLoginClick }) {
   return (
     <header style={{ backgroundColor: '#000', color: '#fff', padding: '1rem 2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
       <div style={{ fontWeight: 'bold', fontSize: '1.25rem' }}>Bulls & Wolves</div>
