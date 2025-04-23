@@ -1,10 +1,14 @@
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import { useState } from 'react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import LoginModal from '../components/LoginModal';
 
 export default function Home() {
+  const [showLogin, setShowLogin] = useState(false);
+
   return (
     <>
-      <Header />
+      <Header onLoginClick={() => setShowLogin(true)} />
       <main style={{ padding: '2rem' }}>
         <section style={{ marginBottom: '3rem' }}>
           <h2 style={{ borderBottom: '1px solid #1d1d1f' }}>
@@ -46,6 +50,7 @@ export default function Home() {
         </section>
       </main>
       <Footer />
+      {showLogin && <LoginModal onClose={() => setShowLogin(false)} />}
     </>
   );
 }
